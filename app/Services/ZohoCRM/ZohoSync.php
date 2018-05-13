@@ -7,9 +7,9 @@ class ZohoSync
     private $model;
 
     private $serviceModels = [
-        'Products'          => Products::class,
-        'Contacts'          => Contact::class,
-        'Vendors'           => Vendor::class,
+        'Products'  => Products::class,
+        'Contacts'  => Contact::class,
+        'Vendors'   => Vendor::class,
     ];
 
     /**
@@ -20,7 +20,6 @@ class ZohoSync
         $this->zohoManager  = new ZohoManager($service);
         $this->token        = config('zoho.token');
         $this->model        = new $this->serviceModels[$service];
-        $this->insertRecords  = [];
     }
 
     /**
