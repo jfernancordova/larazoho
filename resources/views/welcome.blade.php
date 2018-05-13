@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Larazoho</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -68,18 +68,17 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    <a href="{{ url('/api/hello') }}">API Boilerplate</a>
+                    <a href="{{ url('/api/hello') }}">Larazoho</a>
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel API Boilerplate Dockerized
+                    Larazoho
                 </div>
 
-                <div class="links">
-                    <a href="https://github.com/francescomalatesta/laravel-api-boilerplate-jwt/blob/master/readme.md">Documentation</a>
-                    <a href="https://github.com/jfernancordova/docker-laravel-api-dev">GitHub</a>
+                <div class="content">
+                    <p> An API Boilerplate for Zoho CRM</p>
                 </div>
             </div>
         </div>
