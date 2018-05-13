@@ -26,10 +26,10 @@ class SignUpController extends Controller
         }
 
         if(!Config::get('boilerplate.sign_up.release_token')) {
-            return ApiResponse::response(201, 'Ok');
+            return ApiResponse::response(200, 'Ok');
         }
 
         $token = $JWTAuth->fromUser($user);
-        return ApiResponse::response(201, 'Ok', ['token' => $token]);
+        return ApiResponse::response(201, 'Ok', $token);
     }
 }
