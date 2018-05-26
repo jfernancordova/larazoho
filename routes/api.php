@@ -9,10 +9,8 @@ $api = app(Router::class);
 $api->version('v1', function (Router $api) {
 
     // Zoho Delete
-    Route::post('zoho/{service}/', function ($service, \Illuminate\Http\Request $request) {
-
-    })->where(['service' => 'Products']);
-
+	$api->post('zoho', 'App\\Api\\V1\\Controllers\\UserController@zoho');
+	
     $api->group(['prefix' => 'auth'], function(Router $api) {
 
         $api->post('signup', 'App\\Api\\V1\\Controllers\\SignUpController@signUp');

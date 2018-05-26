@@ -1,5 +1,5 @@
 <?php
-namespace App\Zoho;
+namespace App\Services\ZohoCRM;
 use CristianPontes\ZohoCRMClient\ZohoCRMClient;
 use Carbon\Carbon;
 
