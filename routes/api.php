@@ -7,12 +7,22 @@ use App\Helpers\ApiResponse;
 $api = app(Router::class);
 
 $api->version('v1', function (Router $api) {
-
-    // Zoho Delete
-	$api->post('zoho', 'App\\Api\\V1\\Controllers\\UserController@zoho');
+	
+	$api->post('zoho/{module?}', function(string $module = 'Contacts'){
+		$zohoManager = new \App\Services\ZohoCRM\ZohoManager($module);
+		return $zohoManager->getRecords();
+	});
+	
+	$api->post('zohoSync', function(string $module = 'Contacts'){
+		$zohoManager = new \App\Services\ZohoCRM\ZohoSync($module);
+		$zohoManager->sync(1,200);
+	});
+	
+	$api->resource('contacts', 'App\\Api\\V1\\Controllers\\ContactsController',
+		['except' => ['create', 'edit']]);
 	
     $api->group(['prefix' => 'auth'], function(Router $api) {
-
+		
         $api->post('signup', 'App\\Api\\V1\\Controllers\\SignUpController@signUp');
         $api->post('login', 'App\\Api\\V1\\Controllers\\LoginController@login');
 

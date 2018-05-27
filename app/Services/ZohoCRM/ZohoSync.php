@@ -1,15 +1,14 @@
 <?php
-namespace App\Zoho;
+namespace App\Services\ZohoCRM;
+use App\Contact;
+
 class ZohoSync
 {
     private $zohoManager;
-    private $token;
     private $model;
 
     private $serviceModels = [
-        'Products'  => Products::class,
         'Contacts'  => Contact::class,
-        'Vendors'   => Vendor::class,
     ];
 
     /**
@@ -18,7 +17,6 @@ class ZohoSync
      */
     public function __construct($service) {
         $this->zohoManager  = new ZohoManager($service);
-        $this->token        = config('zoho.token');
         $this->model        = new $this->serviceModels[$service];
     }
 
@@ -27,11 +25,13 @@ class ZohoSync
      * @param int $end
      * @throws \CristianPontes\ZohoCRMClient\Exception\UnexpectedValueException
      */
-    public function run(int $start, int $end){
+    public function sync(int $start, int $end){
+	    $recordIndex = 0;
         do {
             $records = $this->zohoManager->getRecordsByIndex($start, $end);
             $this->processRecords($records);
-        } while (empty($records));
+	        $recordIndex ++;
+        } while (empty($records) && $recordIndex < count($records));
     }
 
     /**
@@ -39,19 +39,22 @@ class ZohoSync
      */
     private function processRecords(array $records){
         foreach ($records as $key => $record) {
-            $this->updateOrInsertRecord($record);
+	        $record = $this->model->transformRecordsFromZoho($record);
+            $this->updateOrInsertRecordsOnDB($record);
         }
     }
 
     /**
-     * @param $record
+     * @param array $record
      */
-    private function updateOrInsertRecord($record) {
+    private function updateOrInsertRecordsOnDB(array $record) {
         $search = $this->model->where('id', $record['id'])->first();
         if(!empty($search)) {
             $search->update($record);
         }
-        $this->model->create($record);
+        else{
+	        $this->model->create($record);
+        }
     }
 
     /**
