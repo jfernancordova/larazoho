@@ -21,6 +21,8 @@ $api->version('v1', function (Router $api) {
 	$api->resource('contacts', 'App\\Api\\V1\\Controllers\\ContactsController',
 		['except' => ['create', 'edit']]);
 	
+	
+	
     $api->group(['prefix' => 'auth'], function(Router $api) {
 		
         $api->post('signup', 'App\\Api\\V1\\Controllers\\SignUpController@signUp');

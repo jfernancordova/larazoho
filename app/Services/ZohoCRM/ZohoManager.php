@@ -14,8 +14,7 @@ class ZohoManager
     public function __construct(string $module) {
         $this->zohoClient = new ZohoCRMClient($module, config('zoho.token'));
     }
-	
-	
+    
 	/**
 	 * @param int $start
 	 * @param int $end
@@ -80,7 +79,9 @@ class ZohoManager
      * @return \CristianPontes\ZohoCRMClient\Response\MutationResult
      */
     public function deleteRecords(string $id){
-        return $this->zohoClient->deleteRecords()->id($id)
+        return $this->zohoClient
+	        ->deleteRecords()
+	        ->id($id)
             ->request();
     }
 
