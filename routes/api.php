@@ -13,7 +13,7 @@ $api->version('v1', function (Router $api) {
 		return $zohoManager->getRecords();
 	});
 	
-	$api->post('zohoSync', function(string $module = 'Contacts'){
+	$api->post('zohoSync/{module?}', function(string $module = 'Contacts'){
 		$zohoManager = new \App\Services\ZohoCRM\ZohoSync($module);
 		$zohoManager->sync(1,200);
 	});
@@ -21,7 +21,8 @@ $api->version('v1', function (Router $api) {
 	$api->resource('contacts', 'App\\Api\\V1\\Controllers\\ContactsController',
 		['except' => ['create', 'edit']]);
 	
-	
+	$api->resource('accounts', 'App\\Api\\V1\\Controllers\\AccountsController',
+		['except' => ['create', 'edit']]);
 	
     $api->group(['prefix' => 'auth'], function(Router $api) {
 		

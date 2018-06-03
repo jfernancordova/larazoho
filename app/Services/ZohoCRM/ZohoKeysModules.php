@@ -1,7 +1,7 @@
 <?php
 namespace App\Services\ZohoCRM;
-class ZohoKeysModules
-{
+class ZohoKeysModules  {
+	
 	public const CONTACT = [
 		'id'            => 'CONTACTID',
 		'contactOwner'  => 'Contact Owner',

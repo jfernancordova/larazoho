@@ -13,4 +13,5 @@ class Contact extends ZohoModel
 	    'modifiedBy', 'fullName', 'mailingStreet', 'mailingCity',
 	    'mailingState', 'mailingZip','wfTrigger'
     ];
+    
 }

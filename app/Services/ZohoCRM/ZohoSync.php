@@ -1,5 +1,6 @@
 <?php
 namespace App\Services\ZohoCRM;
+use App\Account;
 use App\Contact;
 
 class ZohoSync
@@ -9,6 +10,7 @@ class ZohoSync
 
     private $serviceModels = [
         'Contacts'  => Contact::class,
+	    'Accounts'  => Account::class,
     ];
 
     /**

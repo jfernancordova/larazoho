@@ -1,5 +1,5 @@
 <?php
-namespace App\Api\V1\Requests\Contacts;
+namespace App\Api\V1\Requests\Accounts;
 use Dingo\Api\Http\FormRequest;
 
 class DestroyRequest extends FormRequest

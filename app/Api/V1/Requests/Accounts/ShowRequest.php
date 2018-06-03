@@ -1,9 +1,10 @@
 <?php
-namespace App\Api\V1\Requests\Contacts;
+
+namespace App\Api\V1\Requests\Accounts;
 use Dingo\Api\Http\FormRequest;
 
-class DestroyRequest extends FormRequest
-{
+class ShowRequest extends FormRequest{
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -11,7 +12,7 @@ class DestroyRequest extends FormRequest
      */
     public function authorize()
     {
-       return true;
+        return true;
     }
 
     /**
