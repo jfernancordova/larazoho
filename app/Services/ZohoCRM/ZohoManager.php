@@ -27,8 +27,7 @@ class ZohoManager
 	        ->getRecords()
 	        ->fromIndex($start)
 	        ->toIndex($end)
-	        ->since((new Carbon())
-		        ->subDay($days))
+	        ->since((new Carbon())->subDay($days))
 	        ->request();
     }
 

@@ -26,7 +26,7 @@ class ZohoKeysModules  {
 		'leadOwner'     => 'Lead Owner',
 		'company'       => 'Company',
 		'firstName'     => 'First Name',
-		'Last Name'     => 'Last Name',
+		'lastName'      => 'Last Name',
 		'designation'   => 'Designation',
 		'email'         => 'Email',
 		'phone'         => 'Phone',

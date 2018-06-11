@@ -2,15 +2,19 @@
 namespace App\Services\ZohoCRM;
 use App\Account;
 use App\Contact;
+use App\Lead;
+use App\Potential;
 
 class ZohoSync
 {
     private $zohoManager;
     private $model;
 
-    private $serviceModels = [
-        'Contacts'  => Contact::class,
-	    'Accounts'  => Account::class,
+    protected $serviceModels = [
+        'Contacts'    => Contact::class,
+	    'Accounts'    => Account::class,
+	    'Potentials'  => Potential::class,
+	    'Leads'       => Lead::class
     ];
 
     /**
@@ -65,5 +69,5 @@ class ZohoSync
     public function delete($id){
         $this->model->where('id', $id)->delete();
     }
-
+    
 }
