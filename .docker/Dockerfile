@@ -37,6 +37,20 @@ COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY ./composer.json ./composer.json
 COPY ./composer.lock ./composer.lock
 
+RUN composer install --no-dev --no-interaction --no-scripts
+
+# entrypoint
+COPY .docker/docker-php-entrypoint /usr/local/bin/
+
 # www-data:
 RUN chown -R www-data:www-data ./ && a2enmod rewrite
+
+RUN chmod 755 /usr/local/bin/docker-php-entrypoint
+RUN chmod 777 -R storage
+
+# mode-root:
 USER root
+
+HEALTHCHECK --interval=50s \
+            --timeout=600s \
+            CMD curl -f http://localhost/api/hello || exit 1

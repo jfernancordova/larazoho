@@ -16,7 +16,7 @@ services:
     image: jfernancordova/docker-laravel-api-dev:1.0.0
     environment:
       APP_NAME: docker-laravel-api-dev
-      APP_ENV: production
+      APP_ENV: local
       APP_DEBUG: "true"
       APP_KEY: 
       APP_LOG_LEVEL: debug
@@ -26,7 +26,7 @@ services:
       DB_DATABASE: apiLaravelDocker
       DB_USERNAME: apiLaravelDocker
       DB_PASSWORD: apiLaravelDocker
-      XDEBUG_MODE: 0
+      XDEBUG_MODE: 1
     depends_on:
       - db
     deploy:
@@ -34,6 +34,8 @@ services:
       replicas: 1
     ports:
       - "80:80"
+    volumes:
+      - .:/docker-laravel-api-dev
 
   db:
     image: mysql:5.7
@@ -44,6 +46,8 @@ services:
       MYSQL_USER: apiLaravelDocker
       MYSQL_PASSWORD: apiLaravelDocker
       MYSQL_ROOT_PASSWORD: apiLaravelDocker
+    volumes:
+      - .docker/local-mysql-datadir:/var/lib/mysql
     deploy:
       mode: replicated
       replicas: 1
