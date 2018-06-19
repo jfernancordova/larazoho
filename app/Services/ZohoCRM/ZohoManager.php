@@ -1,5 +1,5 @@
 <?php
-namespace App\Zoho;
+namespace App\Services\ZohoCRM;
 use CristianPontes\ZohoCRMClient\ZohoCRMClient;
 use Carbon\Carbon;
 
@@ -14,16 +14,21 @@ class ZohoManager
     public function __construct(string $module) {
         $this->zohoClient = new ZohoCRMClient($module, config('zoho.token'));
     }
-
-    /**
-     * @param int $start
-     * @param int $end
-     * @return \CristianPontes\ZohoCRMClient\Request\Field[]|\CristianPontes\ZohoCRMClient\Response\Record[]
-     * @throws \CristianPontes\ZohoCRMClient\Exception\UnexpectedValueException
-     */
-    public function getRecordsByIndex(int $start, int $end){
-        $date = Carbon::now();
-        return $this->zohoClient->getRecords()->fromIndex($start)->toIndex($end)->since($date)->request();
+    
+	/**
+	 * @param int $start
+	 * @param int $end
+	 * @param int $days
+	 * @return \CristianPontes\ZohoCRMClient\Request\Field[]|\CristianPontes\ZohoCRMClient\Response\Record[]
+	 * @throws \CristianPontes\ZohoCRMClient\Exception\UnexpectedValueException
+	 */
+	public function getRecordsByIndex(int $start, int $end, int $days = 100){
+        return $this->zohoClient
+	        ->getRecords()
+	        ->fromIndex($start)
+	        ->toIndex($end)
+	        ->since((new Carbon())->subDay($days))
+	        ->request();
     }
 
     /**
@@ -73,7 +78,9 @@ class ZohoManager
      * @return \CristianPontes\ZohoCRMClient\Response\MutationResult
      */
     public function deleteRecords(string $id){
-        return $this->zohoClient->deleteRecords()->id($id)
+        return $this->zohoClient
+	        ->deleteRecords()
+	        ->id($id)
             ->request();
     }
 
