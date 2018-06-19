@@ -1,0 +1,1848 @@
+{
+	"info": {
+		"name": "larazoho",
+		"_postman_id": "01a14072-ae1e-43bf-8499-127c318ac81a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contacts Module",
+			"description": "",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1/api/contacts",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contactOwner",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadSource",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "José Fernando ",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "324234324324",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Test API",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jfernancordova@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingCountry",
+									"value": "Venezuela",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/contacts",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "contactOwner",
+									"value": "Diego Artiles",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Fer",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "342432432",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Fer",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "fernancordova789@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "23432432423423",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "modifiedBy",
+									"value": "Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingCountry",
+									"value": "Argentina",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadSource",
+									"value": "Diego Artiles",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/contacts/3255208000000191001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"3255208000000191001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "contactOwner",
+									"value": "Diego Artiles",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Fer",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "342432432",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Fer",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "fernancordova789@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "23432432423423",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "modifiedBy",
+									"value": "Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mailingCountry",
+									"value": "Argentina",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadSource",
+									"value": "Diego Artiles",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/contacts/3255208000000191001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"3255208000000191001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leads Module",
+			"description": "",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1/api/leads",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"leads"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "leadOwner",
+									"value": "José Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "José",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "Redeker",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "VP Accounting",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadStatus",
+									"value": "Test API",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jfernancordova@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "23423423432432",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "www.about.me/jfernancordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadSource",
+									"value": "Trade Show",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "leadStatus",
+									"value": "Attempted to Contact",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "industry",
+									"value": "Storage Equipment",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "noOfEmployee",
+									"value": "50",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "Boston 1111",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Boston",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Boston",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "zipCode",
+									"value": "1111",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "USA",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "skypeId",
+									"value": "jfernancordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "emailOpt",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "salutation",
+									"value": "Mr",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/leads",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"leads"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "leadOwner",
+									"value": "JF Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstName",
+									"value": "JF Fernando",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastName",
+									"value": "JF Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "company",
+									"value": "Redeker",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "designation",
+									"value": "VP Accounting",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadStatus",
+									"value": "Test API v2",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "email",
+									"value": "jfernancordova@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "mobile",
+									"value": "23423423432432",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "website",
+									"value": "www.about.me/jfernancordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadSource",
+									"value": "Trade Show",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadStatus",
+									"value": "Attempted to Contact",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "industry",
+									"value": "Storage Equipment",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "noOfEmployee",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "street",
+									"value": "Boston 1111",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "city",
+									"value": "Boston",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "state",
+									"value": "Boston",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "zipCode",
+									"value": "1111",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "country",
+									"value": "USA",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "skypeId",
+									"value": "jfernancordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "emailOpt",
+									"value": "false",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "salutation",
+									"value": "Mr",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/leads/3255208000000215001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"leads",
+								"3255208000000215001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "leadOwner",
+									"value": "JF Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstName",
+									"value": "JF Fernando",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastName",
+									"value": "JF Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "company",
+									"value": "Redeker",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "designation",
+									"value": "VP Accounting",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadStatus",
+									"value": "Test API v2",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "email",
+									"value": "jfernancordova@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "mobile",
+									"value": "23423423432432",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "website",
+									"value": "www.about.me/jfernancordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadSource",
+									"value": "Trade Show",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "leadStatus",
+									"value": "Attempted to Contact",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "industry",
+									"value": "Storage Equipment",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "noOfEmployee",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "fullName",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "street",
+									"value": "Boston 1111",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "city",
+									"value": "Boston",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "state",
+									"value": "Boston",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "zipCode",
+									"value": "1111",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "country",
+									"value": "USA",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "skypeId",
+									"value": "jfernancordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "emailOpt",
+									"value": "false",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "salutation",
+									"value": "Mr",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/leads/3255208000000215001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"leads",
+								"3255208000000215001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22f0902d-ca49-4824-b71e-a710877e3b35",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a318d32-5361-42ad-9011-9f962a61c0b8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Potentials Module",
+			"description": "",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1/api/potentials",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"potentials"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "potentialOwner",
+									"value": "Jf Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "5000",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "potentialName",
+									"value": "Kind",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "closingDate",
+									"value": "2018-05-16",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "accountId",
+									"value": "3255208000000158069",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "accountName",
+									"value": "Kind",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "stage",
+									"value": "Identify Decision Makers",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "New Business",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "probability",
+									"value": "50",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "contactId",
+									"value": "3255208000000155075",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "contactName",
+									"value": "Jose Marrier",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "expectedRevenue",
+									"value": "120000",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "salesCycleDuration",
+									"value": "4",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "overallSalesDuration",
+									"value": "50",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/potentials",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"potentials"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "potentialOwner",
+									"value": "Jf Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "amount",
+									"value": "5000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "potentialName",
+									"value": "Kind",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "closingDate",
+									"value": "2018-05-16",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountId",
+									"value": "3255208000000158069",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountName",
+									"value": "Kind",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "stage",
+									"value": "Identify Decision Makers",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "New Business",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "probability",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "contactId",
+									"value": "3255208000000155075",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "contactName",
+									"value": "Jose Marrier",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "expectedRevenue",
+									"value": "120000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "salesCycleDuration",
+									"value": "4",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "overallSalesDuration",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/potentials/3255208000000222001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"potentials",
+								"3255208000000222001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "potentialOwner",
+									"value": "Jf Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "amount",
+									"value": "5000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "potentialName",
+									"value": "Kind",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "closingDate",
+									"value": "2018-05-16",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountId",
+									"value": "3255208000000158069",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountName",
+									"value": "Kind",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "stage",
+									"value": "Identify Decision Makers",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "New Business",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "probability",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "contactId",
+									"value": "3255208000000155075",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "contactName",
+									"value": "Jose Marrier",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "expectedRevenue",
+									"value": "120000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "salesCycleDuration",
+									"value": "4",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "overallSalesDuration",
+									"value": "50",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/potentials/3255208000000222001",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"potentials",
+								"3255208000000222001"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22f0902d-ca49-4824-b71e-a710877e3b35",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a318d32-5361-42ad-9011-9f962a61c0b8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Accounts Module",
+			"description": "",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://127.0.0.1/api/accounts",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"accounts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accountOwner",
+									"value": "José Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "accountName",
+									"value": "José",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "accountNumber",
+									"value": "0",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "accountType",
+									"value": "Vendor",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "ownerShip",
+									"value": "Partnership",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "industry",
+									"value": "Programming",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "employees",
+									"value": "90",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "sicCode",
+									"value": "0",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "billingStreet",
+									"value": "228 Runamuck Pl #2808",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "billingCity",
+									"value": "Baltimore",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "billingState",
+									"value": "MD",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "billingCountry",
+									"value": "Baltimore City",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/accounts",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"accounts"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "accountOwner",
+									"value": "Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountName",
+									"value": "Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountNumber",
+									"value": "0",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountType",
+									"value": "Vendor",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "ownerShip",
+									"value": "Partnership",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "industry",
+									"value": "Programming",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "employees",
+									"value": "90",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sicCode",
+									"value": "0",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingStreet",
+									"value": "228 Runamuck Pl #2808",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingCity",
+									"value": "Baltimore",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingState",
+									"value": "MD",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/accounts/3255208000000199003",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"3255208000000199003"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "accountOwner",
+									"value": "Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountName",
+									"value": "Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountNumber",
+									"value": "0",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "accountType",
+									"value": "Vendor",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "ownerShip",
+									"value": "Partnership",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "industry",
+									"value": "Programming",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "employees",
+									"value": "90",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "phone",
+									"value": "2342342353242",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "annualRevenue",
+									"value": "850000",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sicCode",
+									"value": "0",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "createdBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "modifiedBy",
+									"value": "José Fernando Cordova",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingStreet",
+									"value": "228 Runamuck Pl #2808",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingCity",
+									"value": "Baltimore",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billingState",
+									"value": "MD",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/api/accounts/3255208000000199003",
+							"host": [
+								"larazoho",
+								"test"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"3255208000000199003"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jfernancordova@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jfernancordova",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/auth/login",
+					"host": [
+						"larazoho",
+						"test"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jfernancordova4",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jfernancordova4@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jfernancordova4",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/auth/signup",
+					"host": [
+						"larazoho",
+						"test"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ZohoManager",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/api/zoho/Contacts",
+					"host": [
+						"larazoho",
+						"test"
+					],
+					"path": [
+						"api",
+						"zoho",
+						"Contacts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ZohoSync",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/api/zohoSync/Potentials",
+					"host": [
+						"larazoho",
+						"test"
+					],
+					"path": [
+						"api",
+						"zohoSync",
+						"Potentials"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
