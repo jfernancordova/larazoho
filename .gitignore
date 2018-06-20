@@ -3,8 +3,8 @@
 .env.php
 .env
 
-vendor/
+\.idea/
 
 \.docker/local-mysql-datadir/
 
-\.idea/
+vendor/

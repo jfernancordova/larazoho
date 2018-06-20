@@ -1,0 +1,53 @@
+version: '3.4'
+services:
+
+  cron:
+    image: jfernancordova/elasticsearch-crons:1.0.0
+    environment:
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Contacts"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Leads"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Potentials"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Accounts"
+    depends_on:
+      - php
+    deploy:
+      mode: replicated
+      replicas: 1
+
+  php:
+    image: jfernancordova/docker-laravel-api-dev:1.0.2
+    environment:
+      APP_NAME: docker-laravel-api-dev
+      APP_ENV: production
+      APP_DEBUG: "true"
+      APP_KEY:
+      APP_LOG_LEVEL: debug
+      APP_URL: "http://localhost"
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_DATABASE: apiLaravelDocker
+      DB_USERNAME: apiLaravelDocker
+      DB_PASSWORD: apiLaravelDocker
+      XDEBUG_MODE: 0
+    depends_on:
+      - db
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "80:80"
+
+  db:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: apiLaravelDocker
+      MYSQL_USER: apiLaravelDocker
+      MYSQL_PASSWORD: apiLaravelDocker
+      MYSQL_ROOT_PASSWORD: apiLaravelDocker
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: none

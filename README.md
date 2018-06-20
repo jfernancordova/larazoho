@@ -1,68 +1,41 @@
-# Laravel API Boilerplate Dockerized
+# Larazoho
 
 [![Build Status](https://travis-ci.org/jfernancordova/docker-laravel-api-dev.svg?branch=master)](https://travis-ci.org/jfernancordova/docker-laravel-api-dev)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* API Laravel Boilerplate 5.5
-* Apache 2
-* MySQL
-* Docker
- 
-## Docker Environments
+A Laravel API Boilerplate For Zoho CRM.
 
-### Swarm Mode
-Clone this respository and run the following commands:
-```bash
-cd docker-laravel-api-dev/
-# Creating mount folder
-mkdir .docker/local-mysql-datadir
-docker stack deploy -c docker-compose.yml docker-laravel-api-dev
-# wait for it and follow the docker instructions!...
-```
-### Docker Compose
-Clone this respository and run the following commands:
-```bash
-cd docker-laravel-api-dev/
-docker-compose -f docker-compose.yml up --build -d
-# wait for it to build and follow the docker instructions!...
-```
-### PWD 
-With Play with Docker and following the docker instructions, it is easy to deploy and test this environment!
+* Accounts Module
+* Contacts Module
+* Leads Module
+* Potentials Module
 
-[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/jfernancordova/docker-laravel-api-dev/master/docker-compose-pwd.yml)
+Clone this repository and follow the basic structure!.
 
-## Docker Instructions
+## Basic Structure
 
-### Execute Laravel Pre-requisites
-In the root directory:
-```bash
-# container lists
-docker ps
-# next, execute an interactive bash shell on the php container.
-docker container exec -t -i [dockerlaravelapidev_php_1 or container Id] bash
-```
-#### Run the following commands:
+* Config: in the .env, the value ZOHO_CRM_AUTH_TOKEN must be set to connect a Zoho CRM account to this boilerplate, however you can set it in the config/zoho directly.
+    * [Reference](https://www.zoho.com/crm/help/api/using-authentication-token.html#Generate_Auth_Token)
 
-##### Compose and Swarm Mode
-```bash
-composer install && cp .env.example .env && php artisan key:generate && php artisan migrate
-chmod 755 -R storage
-# forward to the port 80, go to localhost and enjoy!...
-```
-##### Play With Docker (PWD)
-```bash
-composer install && php artisan migrate
-# forward to the port 80, go to localhost and enjoy!...
-```
+* Controllers: For each module, there is a controller with a simple CRUD to process the data from ZOHO CRM.
 
-### How to fix Error: laravel.log could not be opened?
-In the root directory or inside the container php:
-<pre><code>chmod -R 775 storage </code></pre>
-* 7 - Owner can write
-* 7 - Group can write
-* 5 - Others cannot write!
-Reference:
-https://stackoverflow.com/questions/23411520/how-to-fix-error-laravel-log-could-not-be-opened
+* Services:  
+    * ZohoKeysModules: This class is a stack of constants, in which parser the information from ZOHO CRM to this boilerplate.
+    * ZohoManager: This class is a stack of methods to interact through a Library that get all the records and process them.
+    * ZohoSync: This is a simple class to sync all modules through loop while and given condition, you can connect it with a WebHook from Zoho CRM and get the records every time a data is added, updated or deleted. In the route/api the second parameter can be set by a module, it can be executed and all the records will be sent in the database.
+    
+* Transformers: They are used to display the information given request, you can add or deleted value for any module in its controller.
 
-### API Boilerplate Reference
-https://github.com/francescomalatesta/laravel-api-boilerplate-jwt/blob/master/readme.md
+* Cron: This project has service (docker-compose-dev.yml) that works to get all the records without the webhooks from Zoho CRM, only needs to set the time to call the endpoints.
+
+## How to deploy this boilerplate
+
+This project uses a containerized Laravel API development environment, in which has instructions and different ways to deploy and test.
+
+[docker-laravel-api-dev](https://github.com/jfernancordova/docker-laravel-api-dev)
+
+## Contributors
+
+* [jfernancordova](https://github.com/jfernancordova)
+* [cristianpontes](https://github.com/cristianpontes)
+
