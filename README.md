@@ -10,16 +10,19 @@ A Laravel API Boilerplate For Zoho CRM.
 * Leads Module
 * Potentials Module
 
+Clone this repository and follow the basic structure!.
+
 ## Basic Structure
 
 * Config: in the .env, the value ZOHO_CRM_AUTH_TOKEN must be set to connect a Zoho CRM account to this boilerplate, however you can set it in the config/zoho directly.
+    * [Reference](https://www.zoho.com/crm/help/api/using-authentication-token.html#Generate_Auth_Token)
 
 * Controllers: For each module, there is a controller with a simple CRUD to process the data from ZOHO CRM.
 
 * Services:  
     * ZohoKeysModules: This class is a stack of constants, in which parser the information from ZOHO CRM to this boilerplate.
     * ZohoManager: This class is a stack of methods to interact through a Library that get all the records and process them.
-    * ZohoSync: This is a simple class to sync all modules through loop while and given condition, you can connect it with a WebHook from Zoho CRM and get the records every time a data is added, updated or deleted.
+    * ZohoSync: This is a simple class to sync all modules through loop while and given condition, you can connect it with a WebHook from Zoho CRM and get the records every time a data is added, updated or deleted. In the route/api the second parameter can be set by a module, it can be executed and all the records will be sent in the database.
     
 * Transformers: They are used to display the information given request, you can add or deleted value for any module in its controller.
 
