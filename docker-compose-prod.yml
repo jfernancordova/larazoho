@@ -1,5 +1,19 @@
 version: '3.4'
 services:
+
+  cron:
+    image: jfernancordova/elasticsearch-crons:1.0.0
+    environment:
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Contacts"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Leads"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Potentials"
+      CRON_ENTRY: "* * * * * curl http://php/api/zohoSync/Accounts"
+    depends_on:
+      - php
+    deploy:
+      mode: replicated
+      replicas: 1
+
   php:
     image: jfernancordova/docker-laravel-api-dev:1.0.2
     environment:
