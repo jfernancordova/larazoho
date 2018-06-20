@@ -12,6 +12,8 @@ A Laravel API Boilerplate For Zoho CRM.
 
 ## Basic Structure
 
+* Config: in the .env, the value ZOHO_CRM_AUTH_TOKEN must be set to connect a Zoho CRM account to this boilerplate, however you can set it in the config/zoho directly.
+
 * Controllers: For each module, there is a controller with a simple CRUD to process the data from ZOHO CRM.
 
 * Services:  
@@ -21,7 +23,7 @@ A Laravel API Boilerplate For Zoho CRM.
     
 * Transformers: They are used to display the information given request, you can add or deleted value for any module in its controller.
 
-* Cron: This project has service (docker-compose-dev.yml) that works to get all the records without the webhooks from ZohoCRM, only needs to set the time to call the endpoints.
+* Cron: This project has service (docker-compose-dev.yml) that works to get all the records without the webhooks from Zoho CRM, only needs to set the time to call the endpoints.
 
 ## How to deploy this boilerplate
 
