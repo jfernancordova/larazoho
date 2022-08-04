@@ -14,7 +14,7 @@ Clone this repository and follow the basic structure!.
 
 ## Basic Structure
 
-* Config: in the .env, the value ZOHO_CRM_AUTH_TOKEN must be set to connect a Zoho CRM account to this boilerplate, however you can set it in the config/zoho directly.
+* Config: in the .env, the value `ZOHO_CRM_AUTH_TOKEN` must be set to connect a Zoho CRM account to this boilerplate, however you can set it in the config/zoho directly.
     * [Reference](https://www.zoho.com/crm/help/api/using-authentication-token.html#Generate_Auth_Token)
 
 * Controllers: For each module, there is a controller with a simple CRUD to process the data from ZOHO CRM.
@@ -36,6 +36,6 @@ This project uses a containerized Laravel API development environment, in which 
 
 ## Contributors
 
-* [jfernancordova](https://github.com/jfernancordova)
-* [cristianpontes](https://github.com/cristianpontes)
+* [José Córdova](https://github.com/jfernancordova)
+* [Cristian Pontes](https://github.com/cristianpontes)
 
